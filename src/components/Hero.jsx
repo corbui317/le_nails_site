@@ -1,10 +1,11 @@
 import React from "react";
+import nailsBg from "../assets/gallery/nails-bg.jpg";
 
 export default function Hero() {
   return (
     <section
       className="relative flex items-center justify-center text-center h-screen bg-cover bg-center"
-      style={{ backgroundImage: "url('/images/nails-bg.jpg')" }}
+      style={{ backgroundImage: `url(${nailsBg})` }}
     >
       <div className="bg-white/70 p-10 rounded shadow-lg">
         <h2 className="text-5xl font-script text-primary drop-shadow">Welcome to Soleil Nail Lounge</h2>

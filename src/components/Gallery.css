@@ -1,30 +1,38 @@
-/* src/components/Gallery.css */
 .gallery {
-  text-align: center;
-  padding: 2rem;
-}
-
-.gallery h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #007f7f;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1.5rem;
-}
-
-.gallery-grid img {
+  overflow: hidden;
   width: 100%;
-  height: auto;
-  border-radius: 10px;
-  border: 3px solid black;
+  padding: 1rem 0;
+}
+
+.gallery-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+}
+
+.gallery:hover .gallery-track {
+  animation-play-state: paused;
+}
+
+.gallery img {
+  width: 250px;
+  height: 250px;
   object-fit: cover;
+  margin-right: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
   transition: transform 0.3s ease;
 }
 
-.gallery-grid img:hover {
-  transform: scale(1.05);
+.gallery img.enlarged {
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
