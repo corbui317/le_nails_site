@@ -25,7 +25,7 @@ export default function Testimonials() {
       <h3 className="text-3xl font-script mb-8 text-primary text-center">Testimonials</h3>
       <div className="flex w-max space-x-6 animate-marquee">
         {scrollingReviews.map((testimonial, index) => (
-          <div key={index} className="bg-white shadow-lg rounded p-6 min-w-[250px]">
+          <div key={index} className="bg-white shadow-lg rounded-lg p-6 min-w-[250px]">
             <p className="italic font-script text-lg text-gray-800">“{testimonial}”</p>
             <div className="flex mt-2 text-yellow-500">
               {Array.from({ length: 5 }).map((_, i) => (

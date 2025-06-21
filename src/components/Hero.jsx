@@ -11,7 +11,7 @@ export default function Hero() {
     >
       <div
         ref={fadeRef}
-        className="bg-white/70 p-10 rounded shadow-lg opacity-0 translate-y-4"
+        className="bg-white/70 p-10 rounded-lg shadow-lg opacity-0 translate-y-4"
       >
         <h2 className="text-5xl font-script text-primary drop-shadow">Welcome to Soleil Nail Lounge</h2>
         <p className="mt-4 text-lg text-gray-700">Where beauty meets relaxation</p>
