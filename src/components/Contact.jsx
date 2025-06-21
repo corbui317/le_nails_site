@@ -1,8 +1,14 @@
 import React from "react";
+import useFadeInOnScroll from "../hooks/useFadeInOnScroll";
 
 export default function Contact() {
+  const fadeRef = useFadeInOnScroll();
   return (
-    <section id="contact" className="p-8 bg-white">
+    <section
+      id="contact"
+      ref={fadeRef}
+      className="p-8 bg-accent opacity-0 translate-y-4"
+    >
       <h3 className="text-3xl font-script mb-6 text-center text-primary">
         Contact Information
       </h3>

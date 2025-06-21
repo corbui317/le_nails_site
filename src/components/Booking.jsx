@@ -1,8 +1,14 @@
 import React from "react";
+import useFadeInOnScroll from "../hooks/useFadeInOnScroll";
 
 export default function Booking() {
+    const fadeRef = useFadeInOnScroll();
   return (
-    <section id="booking" className="p-8 bg-white">
+    <section
+      id="booking"
+      ref={fadeRef}
+      className="p-8 bg-accent opacity-0 translate-y-4"
+    >
       <h3 className="text-2xl font-bold mb-4 text-primary text-center">
         Book Your Appointment
       </h3>

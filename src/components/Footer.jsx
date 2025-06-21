@@ -1,5 +1,6 @@
 import React from "react";
 import { FaYelp, FaInstagram } from "react-icons/fa";
+import useFadeInOnScroll from "../hooks/useFadeInOnScroll";
 
 const links = [
   ["Home", "#home"],
@@ -11,8 +12,12 @@ const links = [
 ];
 
 export default function Footer() {
+  const fadeRef = useFadeInOnScroll();
   return (
-    <footer className="bg-primary text-white text-center py-6 mt-10">
+    <footer
+      ref={fadeRef}
+      className="bg-primary text-white text-center py-6 mt-10 opacity-0 translate-y-4"
+    >
             <nav className="mb-4">
         <ul className="flex justify-center space-x-4">
           {links.map(([label, href]) => (

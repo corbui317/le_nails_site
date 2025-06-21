@@ -1,38 +1,32 @@
 .gallery {
-  overflow: hidden;
-  width: 100%;
-  padding: 1rem 0;
+  column-count: 1;
+  column-gap: 1.5rem;
+  padding: 1rem;
 }
 
-.gallery-track {
-  display: flex;
-  width: max-content;
-  animation: scroll 40s linear infinite;
+@media (min-width: 640px) {
+  .gallery {
+    column-count: 2;
+  }
 }
 
-.gallery:hover .gallery-track {
-  animation-play-state: paused;
+@media (min-width: 1024px) {
+  .gallery {
+    column-count: 3;
+  }
 }
 
 .gallery img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  margin-right: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 0.75rem;
+  break-inside: avoid;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery img.enlarged {
-  transform: scale(1.1);
-}
-
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
 }
