@@ -27,7 +27,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
-          source: "build/*" 
+          source: "dist/*" 
           target: /var/www/html
           strip_components: 1
 
@@ -38,4 +38,4 @@ jobs:
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            sudo systemctl restart nginx
+            sudo systemctl restart nginxs
