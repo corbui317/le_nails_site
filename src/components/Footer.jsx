@@ -4,7 +4,7 @@ import useFadeInOnScroll from "../hooks/useFadeInOnScroll";
 
 const links = [
   ["Home", "#home"],
-  ["Services", "#services"],
+  ["Services", "/services.html"],
   ["Booking", "#booking"],
   ["About Us", "#about"],
   ["Coupons", "#coupons"],
@@ -19,7 +19,7 @@ export default function Footer() {
       className="bg-primary text-white text-center py-6 mt-10 opacity-0 translate-y-4"
     >
             <nav className="mb-4">
-        <ul className="flex justify-center space-x-4">
+        <ul className="flex justify-center space-x-6">
           {links.map(([label, href]) => (
             <li key={href}>
               <a href={href} className="hover:underline">

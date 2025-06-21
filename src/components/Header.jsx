@@ -8,7 +8,7 @@ export default function Header() {
           <ul className="flex space-x-6 text-lg">
             {[
               ['Home', '#home'],
-              ['Services', '#services'],
+              ['Services', '/services.html'],
               ['Booking', '#booking'],
               ['About Us', '#about'],
               ['Coupons', '#coupons'],
