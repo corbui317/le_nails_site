@@ -1,10 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import LandingPage from "./pages/index.jsx";
+import ContactPage from "./pages/contact.jsx";
 import "./assets/styles.css";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+const path = window.location.pathname;
+
+root.render(
   <React.StrictMode>
-    <LandingPage />
+    {path === "/contact.html" ? <ContactPage /> : <LandingPage />}
   </React.StrictMode>
 );
